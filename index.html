@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nilam Realty | Plots, Homes & Farmland in Tamil Nadu</title>
+<meta name="description" content="Verified plots, houses, apartments and farmland across Tamil Nadu – Chennai, Coimbatore, Madurai, Trichy and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Noto+Sans+Tamil:wght@400;600&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#home">Nilam Realty <span lang="ta">நிலம்</span></a>
+  <nav>
+    <a href="#listings" data-en="Properties" data-ta="சொத்துகள்">Properties</a>
+    <a href="#why" data-en="Why us" data-ta="ஏன் நாங்கள்">Why us</a>
+    <a href="#contact" data-en="Contact" data-ta="தொடர்புக்கு">Contact</a>
+    <button id="langBtn" type="button" aria-label="Switch language">தமிழ்</button>
+  </nav>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <h1 data-en="Land and homes you can trust, across Tamil Nadu" data-ta="தமிழ்நாடு முழுவதும் நம்பகமான நிலம் மற்றும் வீடுகள்">Land and homes you can trust, across Tamil Nadu</h1>
+    <p data-en="DTCP and RERA approved plots, ready homes and farmland, with clear titles checked before you visit." data-ta="DTCP, RERA அங்கீகாரம் பெற்ற மனைகள், வீடுகள், விவசாய நிலங்கள். பத்திரங்கள் சரிபார்க்கப்பட்டவை.">DTCP and RERA approved plots, ready homes and farmland, with clear titles checked before you visit.</p>
+    <form class="filters" id="filters" aria-label="Filter properties">
+      <label><span data-en="City" data-ta="நகரம்">City</span>
+        <select id="fCity"><option value="all">All</option></select></label>
+      <label><span data-en="Type" data-ta="வகை">Type</span>
+        <select id="fType">
+          <option value="all">All</option><option value="plot">Plot</option><option value="house">House</option>
+          <option value="apartment">Apartment</option><option value="farm">Farmland</option>
+        </select></label>
+      <label><span data-en="Budget" data-ta="பட்ஜெட்">Budget</span>
+        <select id="fBudget">
+          <option value="0">Any</option><option value="25">Up to ₹25 lakh</option><option value="50">Up to ₹50 lakh</option>
+          <option value="100">Up to ₹1 crore</option><option value="300">Up to ₹3 crore</option>
+        </select></label>
+    </form>
+  </section>
+
+  <section id="listings" class="section">
+    <h2 data-en="Available properties" data-ta="கிடைக்கும் சொத்துகள்">Available properties</h2>
+    <p id="count" class="muted" aria-live="polite"></p>
+    <div id="grid" class="grid"></div>
+  </section>
+
+  <section id="why" class="section band">
+    <h2 data-en="What you get when you buy with us" data-ta="எங்களிடம் வாங்கும்போது நீங்கள் பெறுவது">What you get when you buy with us</h2>
+    <div class="cols">
+      <div><h3 data-en="Title check first" data-ta="முதலில் பத்திர சரிபார்ப்பு">Title check first</h3><p data-en="We verify patta, chitta, EC and approvals before a listing goes live." data-ta="பட்டா, சிட்டா, வில்லங்க சான்று, அனுமதிகளை சரிபார்த்த பிறகே பட்டியலிடுகிறோம்.">We verify patta, chitta, EC and approvals before a listing goes live.</p></div>
+      <div><h3 data-en="Site visits arranged" data-ta="இடம் பார்வையிட ஏற்பாடு">Site visits arranged</h3><p data-en="Pick a day. We take you to the property and answer questions on the spot." data-ta="நாளைத் தேர்வு செய்யுங்கள். நாங்கள் உங்களை இடத்திற்கு அழைத்துச் செல்கிறோம்.">Pick a day. We take you to the property and answer questions on the spot.</p></div>
+      <div><h3 data-en="Help with registration" data-ta="பதிவில் உதவி">Help with registration</h3><p data-en="From bank loan paperwork to sub-registrar office, we stay with you." data-ta="வங்கிக் கடன் முதல் சார்பதிவாளர் அலுவலகம் வரை உங்களுடன் இருப்போம்.">From bank loan paperwork to sub-registrar office, we stay with you.</p></div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2 data-en="Tell us what you are looking for" data-ta="உங்கள் தேவையைச் சொல்லுங்கள்">Tell us what you are looking for</h2>
+    <form id="enquiry" class="enquiry" novalidate>
+      <label>Name<input id="qName" required autocomplete="name"></label>
+      <label>Phone<input id="qPhone" type="tel" required autocomplete="tel" inputmode="numeric"></label>
+      <label class="wide">Requirement<textarea id="qMsg" rows="3" placeholder="e.g. 2 cent plot near Madurai, budget 20 lakh"></textarea></label>
+      <p id="formErr" class="err" role="alert" hidden></p>
+      <button class="btn" type="submit" data-en="Send on WhatsApp" data-ta="WhatsApp-இல் அனுப்புக">Send on WhatsApp</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>Nilam Realty · Madurai, Tamil Nadu · <a href="tel:+919999999999">+91 99999 99999</a></p>
+  <p class="muted">RERA No: TN/XX/XXXX (add your number)</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
